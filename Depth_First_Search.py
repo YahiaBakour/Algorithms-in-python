@@ -60,6 +60,10 @@ def dfs(graph, start): #Normal DFS for components
         if vertex not in visited:
             visited.append(vertex)
             stack.extend([i for i in graph[vertex] if i not in visited])
+			if(len(stack) == 1):
+				print(vertex)
+			else:
+				print(vertex,end=" --> ")
     return visited
 
 

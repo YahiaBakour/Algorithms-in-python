@@ -68,7 +68,7 @@ dfs(graph,'1')
 
 from collections import deque
 def bfs_paths(graph,start,goal):
-    queue = deque([(start,[start])]) # Stack contains a set (current vertex (initially start), [path to end vertex from start vertex])
+    queue = deque([(start,[start])]) # Queue contains a set (current vertex (initially start), [path to end vertex from start vertex])
     paths = []
     while(queue):
         (vertex,path) = queue.popleft()

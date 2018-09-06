@@ -3,11 +3,14 @@
 @author: yahia
 """
 
-
-def insertion_sort(Dataset):
-    for i in range(1, len(Dataset)):
-        while 0 < i and Dataset[i] < Dataset[i - 1]:
-            Dataset[i], Dataset[
-                i - 1] = Dataset[i - 1], Dataset[i]
-            i -= 1
+def selection_sort(Dataset):
+    length = len(Dataset)
+    for i in range(length):
+        Min = i
+        for k in range(i + 1, length):
+            if Dataset[k] < Dataset[Min]:
+                Min = k
+        Dataset[Min], Dataset[i] = (
+            Dataset[i], Dataset[Min]
+        )
     return Dataset
